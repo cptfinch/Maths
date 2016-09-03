@@ -1,16 +1,4 @@
 \documentclass[openany]{scrbook}
-%\documentclass[pagesize=auto, version=last, chapterprefix=true]{scrbook}
-\usepackage[]{comment}
-
-\begin{comment}
-\renewcommand*{\thesection}{\S\enspace\arabic{section}}
-\renewcommand*{\dictumwidth}{0.7\textwidth}
-\renewcommand*{\raggeddictum}{\raggedright}
-\renewcommand*{\raggeddictumtext}{}
-\addtokomafont{disposition}{\rmfamily\mdseries}
-\addtokomafont{chapterprefix}{\large}
-\setkomafont{dictumtext}{\normalfont\normalcolor\itshape\setlength{\parindent}{1em}\noindent}
-\end{comment}
 
 \usepackage[utf8]{inputenc}
 \usepackage[]{amsmath}
@@ -23,25 +11,32 @@
     filecolor=magenta,      
     urlcolor=cyan,
 }
-%\usepackage{titling}    % gives you \thedate \theauthor  \thetitle as maketitle removes them
-%\usepackage{lipsum}     % just to generate filler text
-%\setlipsumdefault{66}
+
+\usepackage{titling}    % gives you \thedate \theauthor  \thetitle as maketitle removes them
 
 \usepackage{blindtext}
 \newcommand{\filler}{\blindtext[1]}
 
+\newcommand{\matr}[1]{\mathbf{#1}} % undergraduate algebra version
+%\newcommand{\matr}[1]{#1}          % pure math version
+%\newcommand{\matr}[1]{\bm{#1}}     % ISO complying version
+
+\newcommand{\vect}[1]{\mathbf{#1}}
+%\newcommand{\vect}[1]{\vec{#1}}
+%\newcommand{\vect}[1]{\boldsymbol{#1}}
+
 \title{Mathematics}
 \author{Christopher Finch}
-\date{September 2016}
+\date{\today}
 
 \begin{document}
+\frontmatter
 \maketitle
-%\tableofcontents
+\tableofcontents
 
-%\chapter{Intro}
-%\addchap{Introducton}
+\mainmatter
+\addchap{Introducton}
 \filler
-
 
 \chapter{Set theory}
 
@@ -86,7 +81,28 @@ After that, we shall prove an analogous theorem in the ring of polynomials over 
 \chapter{Eigenvalues and Eigenvectors}
 \section{Introduction to Eigenvalues and Eigenvectors}
 
-\dictum[\theauthor, \thedate]{Hi there}
-\filler
+\dictum{By the end of this section you will be able to 
+\begin{itemize}
+    \item determine eigenvalues and eigenvectors
+    \item prove properties of eigenvalues and eigenvectors
+\end{itemize}
+}
+\subsection{Interesting asides}
+Eigen{vectors/values} occur frequently in physics and engineering. Google's search engine relies upon eigenvalues and eigenvectors.
+
+\subsection{Definition}
+They take the form $\matr{A}\vect{v}=(\text{scalar}) \times \vect{v}$ where $\vect{v}$ is a non-zero vector and $\matr{A}$ is a square matrix.
+
+\subsection{Practical use}
+With the Matrix's Eigen values/vectors you can
+\begin{itemize}
+    \item determine the determinant of the matrix
+    \item determine if the matrix is invertible
+    \item determine the powers of the matrix 
+\end{itemize}
+
+\subsection{Examples}
+Let $\matr{A}=()  $
+
 
 \end{document}
