@@ -1,0 +1,78 @@
+%\includecomment{comment}
+
+\documentclass[pagesize=auto, version=last, chapterprefix=true]{scrbook}
+\begin{comment}
+\documentclass[10pt]{report}
+\end{comment}
+
+\renewcommand*{\thesection}{\S\enspace\arabic{section}}
+\renewcommand*{\dictumwidth}{0.7\textwidth}
+\renewcommand*{\raggeddictum}{\raggedright}
+\renewcommand*{\raggeddictumtext}{}
+\addtokomafont{disposition}{\rmfamily\mdseries}
+\addtokomafont{chapterprefix}{\large}
+\setkomafont{dictumtext}{\normalfont\normalcolor\itshape\setlength{\parindent}{1em}\noindent}
+
+\usepackage[utf8]{inputenc}
+\usepackage[]{amsmath}
+\usepackage[]{amssymb}
+\usepackage[]{amsfonts}
+\usepackage[]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+
+
+\title{Mathematics}
+\author{cptfinch }
+\date{September 2016}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+If no elements are in common then  
+
+\begin{equation*}
+A \cap B = \varnothing \\
+A \cup B \neq \varnothing
+\end{equation*} .
+
+If no elements are in common then
+\begin{center}
+$ A \cap B = \varnothing $ and $ A \cup B \neq \varnothing $
+\end{center}
+
+$\therefore$ since the empty set is an element of all sets (see \href{https://proofwiki.org/wiki/Empty_Set_is_Subset_of_All_Sets}{proof} that empty set is subset of all sets) then $ A\cap B \in A \cup B $.
+
+If elements in $A$ and $B$ are the same, i.e. $ \forall a \in A : a \in B $ (which is the same as saying $A \subseteq B$) and likewise $ \forall b \in B : b \in A $ (all of this previous verbiage can be described as $A = B$) then $A \cap B = A\cap A = A $ and $A\cup B = A\cup A = A$
+
+
+$ f:\mathbb N\to\mathbb N $
+
+$n\mapsto5n$
+
+\[A=\left\{x:x \text{ is a letter in the English alphabet, }x \text{ is a vowel} \right\}\]
+
+Observe that $b \notin A$, $e \in A$ and $p \notin A$.
+
+\[B=\{2,4,6,\dots \}\]
+
+\chapter{Eigenvalues and Eigenvectors}
+\section{Introduction to Eigenvalues and Eigenvectors}
+
+\begin{quote}
+By the end of this section you will be able to
+\begin{itemize}
+    \item hello there
+\end{itemize}
+\end{quote}
+
+\end{document}
+
