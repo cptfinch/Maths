@@ -1,10 +1,8 @@
-%\includecomment{comment}
+\documentclass[openany]{scrbook}
+%\documentclass[pagesize=auto, version=last, chapterprefix=true]{scrbook}
+\usepackage[]{comment}
 
-\documentclass[pagesize=auto, version=last, chapterprefix=true]{scrbook}
 \begin{comment}
-\documentclass[10pt]{report}
-\end{comment}
-
 \renewcommand*{\thesection}{\S\enspace\arabic{section}}
 \renewcommand*{\dictumwidth}{0.7\textwidth}
 \renewcommand*{\raggeddictum}{\raggedright}
@@ -12,6 +10,7 @@
 \addtokomafont{disposition}{\rmfamily\mdseries}
 \addtokomafont{chapterprefix}{\large}
 \setkomafont{dictumtext}{\normalfont\normalcolor\itshape\setlength{\parindent}{1em}\noindent}
+\end{comment}
 
 \usepackage[utf8]{inputenc}
 \usepackage[]{amsmath}
@@ -24,25 +23,33 @@
     filecolor=magenta,      
     urlcolor=cyan,
 }
+%\usepackage{titling}    % gives you \thedate \theauthor  \thetitle as maketitle removes them
+%\usepackage{lipsum}     % just to generate filler text
+%\setlipsumdefault{66}
 
-
+\usepackage{blindtext}
+\newcommand{\filler}{\blindtext[1]}
 
 \title{Mathematics}
-\author{cptfinch }
+\author{Christopher Finch}
 \date{September 2016}
 
 \begin{document}
-
 \maketitle
+%\tableofcontents
 
-\section{Introduction}
+%\chapter{Intro}
+%\addchap{Introducton}
+\filler
+
+
+\chapter{Set theory}
 
 If no elements are in common then  
-
 \begin{equation*}
 A \cap B = \varnothing \\
 A \cup B \neq \varnothing
-\end{equation*} .
+\end{equation*}.
 
 If no elements are in common then
 \begin{center}
@@ -64,15 +71,22 @@ Observe that $b \notin A$, $e \in A$ and $p \notin A$.
 
 \[B=\{2,4,6,\dots \}\]
 
+
+\dictum{
+    By the end of this section you will be able to
+    \begin{itemize}
+        \item 
+        \item 
+    \end{itemize}
+
+After that, we shall prove an analogous theorem in the ring of polynomials over a field.
+}
+
+
 \chapter{Eigenvalues and Eigenvectors}
 \section{Introduction to Eigenvalues and Eigenvectors}
 
-\begin{quote}
-By the end of this section you will be able to
-\begin{itemize}
-    \item hello there
-\end{itemize}
-\end{quote}
+\dictum[\theauthor, \thedate]{Hi there}
+\filler
 
 \end{document}
-
